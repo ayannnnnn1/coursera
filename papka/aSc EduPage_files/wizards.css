@@ -1,0 +1,407 @@
+.wizards-main {
+	font-family: 'Open sans', arial, sans-serif;	
+	background-color: #f5f5f5;
+	min-height: calc(100vh - 43px);
+	font-size: 16px;
+}
+.wizards-main h1, .wizards-main h2, .wizards-main h3 {
+	font-family: 'Open sans', arial, sans-serif;	
+}
+.wizards-hero {
+	background-color: #004574;	
+	color: #fff;
+	position: relative;
+}
+
+.wizards-hero-inner {
+	margin: auto;
+	max-width: 1200px;
+	text-align: center;
+	padding: 30px 15px 80px 15px;
+	box-sizing: border-box;
+}
+
+h1.wizards-hero-title {
+	margin: 0;
+	padding: 0;
+	color: inherit;
+	font-size: 42px;
+    font-weight: 300;
+}
+
+.wizards-content-outer-bg {
+	background: #fff;
+	box-shadow: 0 1px 5px rgba(0,0,0,0.25);
+	max-width: 1200px;
+	margin: auto;
+	box-sizing: border-box;
+	padding: 35px 50px;
+	border-radius: 25px;
+	min-height: 50vh;
+	position: relative;
+	top: -50px;
+}
+
+.noPadding.wizards-content-outer-bg {
+	padding: 0;
+}
+
+.wizards-content-outer {
+	max-width: 1200px;
+	margin: auto;
+	box-sizing: border-box;
+	padding: 15px;
+	position: relative;
+	top: -65px;
+}
+
+.wizards-boxes {
+	display: grid; 
+	grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+	grid-gap: 25px;
+
+	justify-content: end;
+}
+
+.wizards-boxes-flex {
+	display: flex;
+	flex-flow: row wrap;
+	gap: 25px;
+	justify-content: center
+}
+
+.wizards-boxes-flex > .wizards-box {
+	flex: 230px 1 1;
+	min-width: 230px;
+	max-width: 300px;
+}
+
+.wizards-boxes-flex > .wizards-box-empty {
+	flex: 230px 1 1;
+}
+
+.wizards-box {
+	background-color: #fff;
+	box-sizing: border-box;
+	border-radius: 40px;
+	box-shadow: 0 1px 5px rgba(0,0,0,0.25);
+	overflow: hidden;
+	cursor: pointer;
+	color: inherit;
+}
+
+a.wizards-box,
+a.wizards-box:hover {
+	color: inherit;
+	text-decoration: none;	
+}
+
+a.wizards-box:hover {
+	background-color: #222f3e;
+	color: #f5f5f5;
+}
+
+
+.wizards-box-cnt {
+	padding: 16px 25px;
+}
+
+.wizards-box-title {
+	font-weight: bold;
+	font-size: 1.2em;
+}
+
+.wizards-box-img {
+	position: relative;
+	height: 0;
+	box-sizing: content-box;
+	padding-bottom: 56%;
+	overflow: hidden;
+}
+.wizards-box-img img {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	object-fit: cover;	
+}
+
+
+.wizards-box:hover .wizards-box-img::before {
+	content: ' ';
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0,0,0,0.5);
+	z-index: 1;
+}
+
+.wizards-box:hover .wizards-box-img::after {
+	position:absolute;
+	font: normal normal normal 48px/1 FontAwesome;
+	font-size: 48px;
+	top: calc(50% - 24px);
+	left: calc(50% - 24px);
+	color: #fff;
+	z-index: 2;
+	content: "\f0ad";
+}
+
+.wizards-section-title {
+	padding: 0;
+	margin: 80px 10px 30px 10px;
+	font-size: 32px;
+	font-weight: 300;
+	text-align: center;
+}
+
+.wizards-links {
+	text-align: center;
+}
+
+.wizards-or-elem {
+	margin: 0 16px;
+}
+
+.wizards-back-outer0 {
+	position: sticky;
+	top: 43px;
+	color: rgba(200,200,200, 0.8);
+	z-index: 10;
+}
+
+.edubarHeaderHidden .wizards-back-outer0 {
+	top: 0;
+}
+.wizards-back-outer {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+a.wizards-back-btn {
+	color: inherit;
+	font-size: 24px;
+	padding: 12px 8px;
+	display: inline-block;
+	cursor: pointer;
+}
+a.wizards-back-btn:hover {
+	color: inherit;
+	text-decoration: none;
+	background-color: rgba(0,0,0,0.05);
+}
+
+.wizards-card-section {
+	padding: 35px 30px 35px 80px;
+	position: relative
+}
+
+.wizards-card-section.with-r {
+	display:flex;
+	flex-flow: row wrap;
+}
+
+.wizards-card-section.with-r .wizards-card-section-inner {
+	flex: 400px 1 1;
+	min-width: 350px;
+}
+
+.wizards-card-section.with-r .wizards-info-r {
+	flex: auto 0 0;
+	min-width: 250px;
+}
+
+
+.wizards-card-icon {
+	left: 12px;
+	top: 26px;
+	font-size: 24px;
+	position: absolute;
+	color: rgba(0,0,0,0.4);
+	cursor: pointer;
+	padding: 8px 12px;
+	border-radius: 50%;
+}
+.wizards-card-toggle {
+	cursor: pointer;
+}
+.wizards-card-toggle:hover > .wizards-card-icon  {
+	background-color: rgba(0,0,0,0.05);
+	color: inherit;
+}
+
+.wizards-card-section.collapsed .wizards-card-icon i:before {
+	content: '\f105';
+}
+.wizards-card-section.collapsed .wizards-card-content {
+	display: none;
+}
+.wizards-card-section h2 {
+	padding: 0;
+	margin: 0 0 12px 0;
+	font-size: 30px;
+}
+
+.alternatingEven .wizards-card-section:nth-child(even) {
+	background-color: #f1f3f5;
+}
+
+.alternatingOdd .wizards-card-section:nth-child(odd) {
+	background-color: #f1f3f5;
+}
+/*
+.wizards-card-section[data-id="skinVariantsCard"] {
+	background-color: #f1f3f5;
+	border-radius: inherit;
+}*/
+
+.wizards-card-subtitle {
+	max-width: 600px;
+}
+
+
+
+.wizards-tt-items {
+	display: grid; 
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	grid-gap: 50px;
+	justify-content: end;	
+	padding: 25px 0;
+}
+
+
+.wizards-tt-item {
+	
+	position: relative;
+	display: flex;
+	flex-flow: column nowrap
+}
+
+.wizards-tt-item > b {
+	font-size: 1.3em;
+	margin-bottom: 8px;
+}
+
+.wizards-tt-item-text {
+	flex: auto 1 1;
+}
+a.wizards-tt-item-link {
+	color: inherit;
+	text-decoration: none;
+}
+
+a.wizards-tt-item-link:hover {
+	color: inherit;
+	text-decoration: none;
+}
+
+
+.wizards-btn {
+	display: inline-block;
+	color: #fff;
+	padding: 0;
+	cursor: pointer;
+	border: 0px solid #2E7D32;
+	background-color: 	#43A047;
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
+	border-radius: 3px;
+	margin-top: 15px;	
+	font-size: 12pt;
+	padding: 12px 15px;
+	transition: transform 0.2s ease
+}
+
+.wizards-btn.helpusBlue {
+	background-color: #2196F3;
+}
+
+
+.wizards-btn i {
+	vertical-align: middle;
+	transition: transform 0.2s ease-in-out;
+}
+.wizards-btn span {
+	vertical-align: middle;	
+}
+
+.wizards-btn:hover,
+.wizards-tt-item-link:hover .wizards-btn {
+	background-color: #1B5E20;
+	text-decoration: none;
+	color: #fff;
+}
+.wizards-btn.helpusBlue:hover {
+	background-color: #1976D2;
+	text-decoration: none;
+}
+
+
+/*
+.wizards-card-content .skinVariantsList {
+	background-color: transparent;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, 330px);
+	grid-gap: 25px;
+	justify-content: center;	
+	padding: 30px 0;
+}
+
+.wizards-card-content .skinVariantsList .skinVariantItem {
+	width: auto;
+}
+
+.wizards-card-content .skinVariantItemInner {
+	margin: 0;
+	padding: 15px;
+	height: 100%;
+	box-shadow: 0 1px 5px rgba(0,0,0,0.25);
+	border-radius: 25px;
+	overflow: hidden;
+}
+
+.wizards-card-content .skinVariantItemInner .skinVariantPreviewDiv {
+	margin: -15px;
+	width: calc(100% + 30px);
+	margin-top: 0;
+}*/
+
+.wizards-card-content .skinVariantPreviewDiv {
+	height: 400px;
+}
+
+a.wizards-link-button {
+	color:inherit;
+	cursor: pointer;
+	display: inline-block;
+	padding: 8px;
+	vertical-align: middle;	
+}
+
+a.wizards-link-button:hover {
+	background-color: rgba(0,0,0,0.05);
+	text-decoration: none;
+}
+a.wizards-link-button.withBorder {
+	font-weight:bold;
+	border: 1px solid rgba(0,0,0,0.2);
+	border-radius: 15px;padding: 8px 12px;
+}
+.wizards-info-r {
+	float: right;
+	margin-top: 15px;
+	margin-left: 15px;
+	margin-bottom: 15px;
+}
+.wizards-info-r2 {
+	margin-top: 15px;
+	margin-left: 15px;
+	margin-bottom: 15px;
+}
+
+@media screen and (max-width: 900px) {
+	.wizards-info-r {
+		float: none;
+	}
+}
